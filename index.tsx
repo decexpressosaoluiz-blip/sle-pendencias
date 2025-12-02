@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import './index.css';
+import '../index.css'; // Updated path to point to root index.css or src/index.css depending on location. Assuming root for now based on previous.
 
+// Ensure we find the root element
 const mount = () => {
   let rootElement = document.getElementById('root');
   
@@ -21,7 +22,6 @@ const mount = () => {
   );
 };
 
-// Ensure DOM is ready before mounting
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', mount);
 } else {
