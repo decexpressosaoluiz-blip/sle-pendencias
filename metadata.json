@@ -1,0 +1,8 @@
+{
+  "name": "São Luiz Express - Pendências",
+  "description": "Sistema de controle de pendências, justificativas e KPIs com IA.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
