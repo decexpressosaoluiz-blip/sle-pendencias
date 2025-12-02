@@ -41,8 +41,8 @@ export function SettingsPanel() {
           setUsers(uData);
 
           // Extract Unique Units from BASE sheet (Columns H and I)
-          const uniqueOrigins = Array.from(new Set(pendenciaData.map(p => p.coleta).filter(Boolean))).sort();
-          const uniqueDests = Array.from(new Set(pendenciaData.map(p => p.entrega).filter(Boolean))).sort();
+          const uniqueOrigins = Array.from(new Set(pendenciaData.map(p => p.coleta).filter((c): c is string => !!c))).sort();
+          const uniqueDests = Array.from(new Set(pendenciaData.map(p => p.entrega).filter((c): c is string => !!c))).sort();
           
           setOriginOptions(uniqueOrigins);
           setDestOptions(uniqueDests);
